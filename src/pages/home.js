@@ -1,8 +1,32 @@
 export function renderHomePage(container, navigate, profile) {
+  const page = document.createElement("div");
+  page.className = "page";
+
+  page.innerHTML = `
+    <div class="topbar">
+      <div class="page-title">Home</div>
+      <div class="page-sub">Welcome back</div>
+    </div>
+
+    <div style="padding:24px;">
+      <h2>Hello ${profile?.name || "Student"} 👋</h2>
+      <p>Continue your learning journey.</p>
+
+      <button id="goSettings">Go to Settings</button>
+    </div>
+  `;
+
+  page.querySelector("#goSettings").addEventListener("click", () => {
+    navigate("settings");
+  });
+
+  container.appendChild(page);
+}
+
 
 export function renderSettingsPage(container) {
-  const page = document.createElement('div');
-  page.className = 'page';
+  const page = document.createElement("div");
+  page.className = "page";
 
   page.innerHTML = `
     <div class="topbar">
@@ -94,5 +118,4 @@ export function renderSettingsPage(container) {
   `;
 
   container.appendChild(page);
-}
 }
