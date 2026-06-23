@@ -1,3 +1,5 @@
+export function renderHomePage(container, navigate, profile) {
+
 export function renderSettingsPage(container) {
   const page = document.createElement('div');
   page.className = 'page';
@@ -92,4 +94,5 @@ export function renderSettingsPage(container) {
   `;
 
   container.appendChild(page);
+}
 }
