@@ -1,4 +1,20 @@
-export function renderSettingsPage(container) {
+export function renderSettingsPage(container) {export function renderWeekPage(container, navigate, profile) {
+  const page = document.createElement("div");
+  page.className = "page";
+
+  page.innerHTML = `
+    <div class="topbar">
+      <div class="page-title">Weekly Plan</div>
+      <div class="page-sub">Your study week</div>
+    </div>
+
+    <div style="padding:24px;">
+      <h2>This Week</h2>
+      <p>Plan your study sessions here.</p>
+    </div>
+  `;
+
+  container.appendChild
   const page = document.createElement('div');
   page.className = 'page';
 
@@ -92,4 +108,6 @@ export function renderSettingsPage(container) {
   `;
 
   container.appendChild(page);
+}
+(page);
 }
